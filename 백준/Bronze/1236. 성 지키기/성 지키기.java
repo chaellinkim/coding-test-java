@@ -11,26 +11,15 @@ public class Main {
         StringTokenizer st = new StringTokenizer(br.readLine());
         int x = Integer.parseInt(st.nextToken());
         int y = Integer.parseInt(st.nextToken());
-        int count =0,count2= 0;
-        boolean isrow = false;
+        int count =0,count2= 0,max=0;
         boolean iscol = false;
         String[] str = new String[x];
 
         for (int i = 0; i < x; i++) {
             str[i] = br.readLine();
-        }
-
-        for (int i = 0; i < x; i++) {
-            isrow = false;
-
-            for (int j = 0; j < y; j++) {
-                if (String.valueOf(str[i].charAt(j)).equals("X")) {
-                    isrow = true;
+                if (str[i].contains("X")==false) {
+                    count++;
                 }
-            }
-            if (isrow == false) {
-                count++;
-            }
         }
         for (int i = 0; i < y; i++) {
             iscol = false;
@@ -43,10 +32,7 @@ public class Main {
                 count2++;
             }
         }
-        if(count>count2) {
-            System.out.println(count);
-        }else{
-            System.out.println(count2);
-        }
+        max = Math.max(count,count2);
+        System.out.println(max);
     }
 }
