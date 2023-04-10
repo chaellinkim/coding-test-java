@@ -1,0 +1,7 @@
+select  WAREHOUSE_ID, 
+        WAREHOUSE_NAME, 
+        ADDRESS, 
+COALESCE (FREEZER_YN, 'N') as FREEZER_YN
+from    FOOD_WAREHOUSE
+Where ADDRESS like '경기도%'
+order by WAREHOUSE_ID;
