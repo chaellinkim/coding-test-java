@@ -7,7 +7,6 @@ class Solution {
         Arrays.sort(chars,Collections.reverseOrder());
         
         return Arrays.stream(chars)
-                   .map(c->c+"")
-                   .collect(Collectors.joining());
+                   .map(c->c+"").collect(Collectors.joining());
     }
 }
