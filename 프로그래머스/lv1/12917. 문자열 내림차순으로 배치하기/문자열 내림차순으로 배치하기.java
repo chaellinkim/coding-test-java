@@ -7,7 +7,7 @@ class Solution {
         Arrays.sort(chars,Collections.reverseOrder());
         
         return Arrays.stream(chars)
-                   .map(Object::toString)
+                   .map(c->c+"")
                    .collect(Collectors.joining());
     }
 }
